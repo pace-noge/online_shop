@@ -1,0 +1,18 @@
+{% extends 'admin_base.html' %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+{% block content %}
+    <legend><h3>Tambah Kategori</h3></legend>
+    <h3>Daftar kategori yang sudah ada</h3>
+    {% for kat in existCat %}
+        {{ kat }}<br/>
+    {% endfor %}
+    <hr />
+    <form method="post" action="/tambahKategori" name="tmbhKategori">
+        {{ form.hidden_tag() }}
+       Category: <br />
+        {{ form.category }}<br />
+        <input type="submit" value="Tambah Kategori" class="btn btn-primary">
+    </form>
+{% endblock %}

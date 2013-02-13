@@ -1,0 +1,43 @@
+{% extends 'admin_base.html' %}
+{% block halactive %}<li class="active">Tambah Barang</li> {% endblock %}
+{% block title %}
+    Tambah Barang
+{% endblock %}
+
+{% block content %}
+<legend><h1>Tambah Barang</h1></legend>
+<form action='/tambahBarang' method='post' name='tmbhBrg' enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    <p>
+    <div class="span10">
+        <div class="span5">
+        Nama Barang: <br />
+        {{ form.barang(size=80) }}<br />
+        Harga Barang:<br />
+        {{ form.harga(size=50) }}<br />
+        Stock:<br/>
+        {{ form.stock(size=10) }}<br />
+        Discount:<br />
+        {{ form.disc }}<br />
+        Deskripsi: <br/>
+        {{ form.desc() }}<br />
+        </div>
+    <div class="span5">
+        {{ form.kategori }}<br />
+        Warna: <br />
+        {{ form.warna }}<br />
+        gambar Utama: <br />
+        {{ form.img_main }}<br />
+        gambar Depan: <br />
+        {{ form.img_front }}<br />
+        gambar Belakang: <br />
+        {{ form.img_back }}<br />
+        gambar Samping: <br />
+        {{ form.img_side }}</p>
+    </div>
+    <div class="span10">
+        <p><input type="submit" value='Tambah' class="btn btn-primary"></p><p></p>
+    </div>
+    </div>
+</form>
+{% endblock %}

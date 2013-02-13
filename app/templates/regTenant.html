@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+{% block content %}
+    <legend><h3>Register as Tenant</h3></legend>\
+    <form method="post" action="." name="Regtenant">
+        {{  form.hidden_tag() }}
+        Nama : <br />
+        {{ form.tenant_name }} <br />
+        Alamat : <br />
+        {{ form.tenant_address }}<br />
+        No. Telp: <br />
+        {{ form.tenant_phone }} <br />
+        Email: <br />
+        {{ form.tenant_email }} <br />
+        Description: <br />
+        {{ form.tenant_desc }} <br />
+        <input type="submit" value="Daftar" class="btn btn-primary">
+    </form>
+{% endblock %}
