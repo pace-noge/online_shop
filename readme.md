@@ -1,31 +1,14 @@
 # Description
 
-EmeraldBox is a boilerplate framework for developing python web applications with database access. 
-The underlying web framework is Flask, a python microframework based on werkzeug, jinja2 and good intentions. 
-Flask gives a complete basic package. EmeraldBox gives structure and helper tools to speed up development and app deployment on servers.
-Several basic packages commonly used in developing web applications are included.
-
+This online shop built based on Emeraldbox bolier plate 
 Since EmeraldBox is derived from Flask, it uses a lot of Flask patterns and also implements a structure to Flask applications based on Flask's best practice for large applications. However, EmeraldBox did not implement Blueprint.
 
 The structure implemented is mostly based on the following links:
 * http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world by Miguel Grinberg
 * http://flask.pocoo.org/docs/patterns/packages/ by Armin Ronacher
 
-# Motivation
-
-Developing web apps should be done in the easiest and most efficient ways. Python offers that. 
-However, most of the available frameworks required a deep learning curve for new users and most users have problems deploying the web app. 
-
-After using several python web frameworks as well as using other languages' frameworks like Rails, CodeIgniter and Zend, the author came to a conclusion that python is the easiest and most efficient language. 
-
-However, it will require tools that may speed up development. It that sense, Rails has a very good approach and will be implemented for the helper tools. Integration with 3rd party packages should also comes easily without having the need to interfere with the main OS, hence comes virtualenv. 
-
-Thus, comes EmeraldBox, an easy-to-use, light-weight, and easy-to-deploy framework.
-
-EmeraldBox comes in a localized environment and includes standard packages that are commonly used in web development. The tool includes framework management tools and is designed to give ease for developers in managing database and migrations.
 
 # Installer package
-
 To run EmeraldBox, you need python 2.5 and above. However, Python 3 is not yet supported.
 
 EmeraldBox setup will install the following packages for you:
