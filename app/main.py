@@ -21,7 +21,9 @@ from forms import TambahBarang, RegTenant, TambahKategori
 @app.route('/index')
 def index():
 	# define your controller here
-	return render_template('welcome.html', title='Online Shopper')
+    products = Product.query.all()
+    return render_template('index.html', title='Online Shopper', products = products)
+	
 
 def allowedFile(filename):
         return '.' in filename and filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIIONS
@@ -74,10 +76,12 @@ def tambahKategori():
 def dataBarang():
     tes = "tes"
 
-@app.route('/kategori/<kategori>')
-def barang(kategori):
-    product = Product.query.filter_by(cat_id = kategori).all()
-    if product == None:
-        product = "Produk untuk kategori ini belum ada, silahkan pilih kategori yang lain"
+@app.route('/Product')
+def product():
+    products = Product.query.all()
+    if products == None:
+        products = "Produk untuk kategori ini belum ada, silahkan pilih kategori yang lain"
 
-    return render_template('kategori.html', title='Kategori', product = product)
+    return render_template('kategori.html', title='Kategori', products = products)
+
+

@@ -23,9 +23,14 @@
         font-weight: bold;
         color: #FFFFFF;
       }
+      .carousel img {
+        position:  absolue;
+        top: 0;
+        min-width: 100%;
+        height: 500px;
+      }
     </style>
-    <script src="/static/js/jquery.js" type="text/javascript" charset="utf-8" async defer></script>
-   <script src="/static/js/jquery-ui.js" type="text/javascript"></script>
+ 
   </head>
   <body>
     <!-- navbar -->
@@ -37,11 +42,12 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   </button>
-                  <a class="brand" href="#">Online Shopper</a>
+                  <a class="brand" href="#">Online<font color="#0099ff">Shopper</font></a>
                   <ul class="nav">
-                  <li class="active"><a href="/index">Home</a></li>
                   <li class="divider-vertical"></li>
-                  <li><a href="/tambahBarang">Tambah Barang</a></li>
+                  <li {% if request.path == "/index" or request.path == "/" or request.path == "" %}class="active" {% endif %}><a href="/index">Home</a></li>
+                  <li class="divider-vertical"></li>
+                  <li {% if request.path == "/Product" %}class="active" {% endif %}><a href="/Product">Our Product</a></li>
                   <li class="divider-vertical"></li>
                   </ul>
               </div>
@@ -63,11 +69,11 @@
     </div>
     </div>
     </div>
-    <script src="/static/js/bootstrap.js" type="text/javascript" charset="utf-8" async defer></script>
-    
-    
-    <script>
-      $("#accordion").accordion();
-    </script>
+   <script src="/static/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+   <script src="/static/js/jquery-ui.js" type="text/javascript"></script>
+   <script src="/static/js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+   <script type="text/javascript">
+    $("#mycarousel").carousel();
+   </script>
   </body>
 </html>
