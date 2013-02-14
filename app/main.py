@@ -22,7 +22,7 @@ from forms import TambahBarang, RegTenant, TambahKategori
 def index():
 	# define your controller here
     products = Product.query.all()
-    return render_template('index.html', title='Online Shopper', products = products)
+    return render_template('mainpage.html', title='Online Shopper', products = products)
 	
 
 def allowedFile(filename):
