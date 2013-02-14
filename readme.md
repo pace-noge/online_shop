@@ -1,7 +1,14 @@
 # Description
 
 This online shop built based on Emeraldbox bolier plate 
-Since EmeraldBox is derived from Flask, it uses a lot of Flask patterns and also implements a structure to Flask applications based on Flask's best practice for large applications. However, EmeraldBox did not implement Blueprint.
+Since EmeraldBox is derived from Flask, it uses a lot of Flask patterns and also implements a structure to Flask applications based on Flask's best practice for large applications. However, EmeraldBox did not implement Blueprint. 
+For the css Framework this online shop using twitter bootstrap, and using jquery-ui for some page, 
+
+you can download or customize the twiter bootstrap from following links:
+* http://twitter.github.com/bootstrap/
+
+for jquery-ui you can customize and download from this link:
+* http://jqueryui.com/
 
 The structure implemented is mostly based on the following links:
 * http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world by Miguel Grinberg
