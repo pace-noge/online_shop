@@ -85,3 +85,11 @@ def product():
     return render_template('kategori.html', title='Kategori', products = products)
 
 
+@app.route('/detailProduk/<int:prod_id>')
+def detailProduk(prod_id):
+    product = Product.query.filter_by(id=prod_id).all()
+    if product == None:
+        product = "Maaf link yang anda klik salah"
+
+    return render_template('detailProduk.html', product=product, title="Detail Produk")
+

@@ -5,8 +5,8 @@
     <ul class="thumbnails">
     {% for product in products %}
             <li class="span3">            
-            <a class="thumbnail" href="/kategory/{{ product.prod_id }}" >
-                <img alt="" src="static/uploads/{{ product.prod_image_main }}" width="100px" height="200px"/>
+            <a class="thumbnail" href="/detailProduk/{{ product.id }}" >
+                <img alt="" src="static/uploads/{{ product.prod_image_main }}" />
             </a>                    
             <h4>{{ product.prod_name }} </h4>
           <p> Stock: {{ product.prod_stock }} <br />

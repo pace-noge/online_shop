@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta charset="utf-8">
@@ -68,6 +68,8 @@
     display: block;
     line-height: 20px;
     padding: 4px;
+    height: 250px;
+    vertical-align: middle;
     transition: all 0.2s ease-in-out 0s;
 }
 .thumbnail > img {
@@ -75,7 +77,10 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
+    max-height: 100%;
+    
 }
+
     </style>
  
   </head>
@@ -103,7 +108,20 @@
         <!-- end of NAvigation -->
     <div class="container">
       <div class="row">
-     
+        <header class="jumbotron subhead" id="overview">
+          <div class="container">
+            <h1>Daftar Produk</h1>
+            <p class="lead">Silahkan cari barang berdasarkan Kategori</p>
+            <form>
+              <div class="span12">
+                <input type="text" placeholder="Masukkan kata pencarian">
+                <select placeholder="masukkan pilihan"><option>Nasa</option></select>
+                <input type="submit" class="btn btn-primary" value="cari"/>
+              </div>
+            </form>
+          </div>
+
+        </header>
       {% block content %}{% endblock %}
     
       </div>

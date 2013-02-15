@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+{{ request.path }}
+<div class="container">
+    <div class="row">
+        <div class="span9" style="vertical-align: middle;">
+            {% for detail in product %}
+                 {{ detail.prod_name }} <br />
+                 {{ detail.prod_desc }}<br />
+             {% endfor %}
+        </div>
+        <div class="span3">
+            This the other side bar
+        </div>
+    </div>
+</div>
+{% endblock %}
